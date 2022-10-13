@@ -1,0 +1,121 @@
+/* npx tailwindcss -i ./style/style.css -o ./style/tailwind.css --watch */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(201, 201, 201);
+}
+
+::-webkit-scrollbar-track {
+  border-left: solid 2px #464649;
+}
+::-webkit-scrollbar-thumb {
+  background: #464649;
+}
+
+.font-body {
+  font-family: "Inter", sans-serif;
+}
+.font-display {
+  font-family: "JetBrains Mono", monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#nav {
+  top: -1px;
+  padding: 1rem;
+  padding-top: calc(1rem + 1px);
+}
+
+#nav a {
+  display: flex;
+  align-items: center;
+}
+
+.isSticky {
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(18px);
+}
+
+nav label span,
+#sticky-nav a {
+  height: 12px;
+  width: 12px;
+  display: block;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+header {
+  width: 100%;
+  height: calc(100vh - 5rem);
+}
+
+.project-tags p:before {
+  content: " / ";
+}
+
+.project-tags p:first-of-type:before {
+  content: none;
+}
+
+.project-open {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.project-open span {
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.project-open span:first-of-type {
+  transform: rotate(90deg);
+}
+
+.project-open:hover {
+  transform: scale(1.1) rotate(270deg);
+  background-color: white;
+}
+
+.project-open:hover span {
+  background-color: rgb(24 24 27);
+  height: 3px;
+}
+
+.project-short-desc {
+  transform: translateX(300px);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+.project-card:hover .project-short-desc {
+  transform: translateX(0);
+  opacity: 1;
+}
+.project-card-cover {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.project-card:hover .project-card-cover {
+  opacity: 1;
+}

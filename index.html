@@ -4,10 +4,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fryderyk Boncler</title>
-    <link rel="stylesheet" href="/style/style.css" />
+    <title>Fryderyk Boncler // portfolio</title>
+    <link rel="stylesheet" href="/style/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <script src="/script/mains.js"></script>
+  <body id="body" class="bg-zinc-900 text-gray-100 font-body">
+    <nav
+      id="nav"
+      class="flex flex-row justify-between w-full align-center items-center sticky duration-300 z-[100]"
+    >
+      <a href="#" class="flex items-center h-10">relcnob</a>
+      <label
+        class="grid grid-cols-2 w-10 h-10 hover:w-8 hover:h-8 hover:m-1 duration-300 cursor-pointer items-center justify-center justify-items-center"
+      >
+        <span class="bg-gray-100"></span><span class="bg-gray-100"></span
+        ><span class="bg-gray-100"></span><span class="bg-gray-100"></span>
+      </label>
+      <section id="header-nav" class="absolute"></section>
+    </nav>
+    <section
+      id="sticky-nav"
+      class="fixed right-[0.4rem] flex flex-col gap-2 h-auto top-1/2 z-50"
+    >
+      <a
+        href="#body"
+        class="bg-zinc-900 border-solid border-2 border-gray-100 cursor-pointer block hover:bg-gray-100"
+      ></a>
+      <a
+        href="#works"
+        class="bg-zinc-900 border-solid border-2 border-gray-100 cursor-pointer block hover:bg-gray-100"
+      ></a>
+      <a
+        href="#about"
+        class="bg-zinc-900 border-solid border-2 border-gray-100 cursor-pointer block hover:bg-gray-100"
+      ></a>
+      <a
+        href="#contact"
+        class="bg-zinc-900 border-solid border-2 border-gray-100 cursor-pointer block hover:bg-gray-100"
+      ></a>
+    </section>
+    <header class="flex flex-col justify-center px-4 relative">
+      <h1 class="text-9xl">fryderyk</h1>
+      <h1 class="text-9xl">boncler</h1>
+      <p class="text-2xl text-rose-500 ml-2 font-display">
+        //frontend developer
+      </p>
+      <span
+        class="absolute w-6 h-6 flex justify-items-center items-center bg-gray-100 bottom-0 right-1/2 z-10"
+      >
+        <a href="#works" class="w-full h-full block"></a
+      ></span>
+    </header>
+    <main>
+      <section id="works" class="h-screen p-6 pt-24 flex flex-col">
+        <h2 class="text-5xl col-span-full font-display">//works</h2>
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 h-full py-24 gap-8">
+          <article
+            class="project-card w-full h-full rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+          >
+            <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
+            <section class="project-tags flex flex-row text-sm mb-6 px-4 z-10">
+              <p class="mr-1">HTML</p>
+              <p class="mr-1">CSS</p>
+              <p class="mr-1">JS</p>
+              <p class="mr-1">Tailwind</p>
+            </section>
+            <p class="project-short-desc text-md grow px-4 z-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              possimus quos fugiat recusandae, nisi nulla, incidunt
+              necessitatibus eius quam eligendi nam commodi quaerat
+              voluptatibus. Unde?
+            </p>
+            <a
+              href="project.html"
+              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
+              ><span></span><span></span
+            ></a>
+            <div
+              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
+            ></div>
+            <img
+              src="/assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 opacity-25"
+            />
+          </article>
+          <article
+            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
+          ></article>
+          <article
+            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
+          ></article>
+          <article
+            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
+          ></article>
+        </div>
+      </section>
+      <section id="about" class="p-4 pt-24 h-screen">
+        <h2 class="text-5xl col-span-full font-display">//about</h2>
+      </section>
+      <section id="contact" class="p-4 pt-24 h-screen">
+        <h2 class="text-5xl col-span-full font-display">//contact</h2>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="/script/main.js"></script>
   </body>
 </html>
