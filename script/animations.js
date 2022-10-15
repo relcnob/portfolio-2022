@@ -18,7 +18,7 @@ function animInit() {
       {
         delay: stagger(0.2),
         duration: 1,
-        easing: [0.22, 0.03, 0.26, 1],
+        easing: "ease-in-out",
       }
     );
     animate(
@@ -72,6 +72,59 @@ function animInit() {
       easing: "ease-in-out",
     }
   );
+  // h2
+  inView("h2", ({ target }) => {
+    animate(
+      target,
+      { x: [-500, 0], opacity: [0, 1] },
+      {
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
+  inView("form", ({ target }) => {
+    animate(
+      target.querySelectorAll("form div"),
+      { y: [500, 0], opacity: [0, 1] },
+      {
+        delay: stagger(0.1),
+        duration: 0.5,
+        easing: "ease-in-out",
+      }
+    );
+    animate(
+      target.querySelector("form button"),
+      { y: [500, 0], opacity: [0, 1] },
+      {
+        delay: 0.3,
+        duration: 0.5,
+        easing: "ease-in-out",
+      }
+    );
+  });
+  // about
+  inView("#about", ({ target }) => {
+    animate(
+      target.querySelector("div"),
+      { y: [500, 0], opacity: [0, 1] },
+      {
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
+
+  inView("footer", ({ target }) => {
+    animate(
+      target,
+      { opacity: [0, 1] },
+      {
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
 
   // project cards
   inView("#works div", ({ target }) => {
@@ -167,4 +220,8 @@ function animInit() {
       );
     });
   });
+
+  setTimeout(() => {
+    document.querySelector(".lastName-wrapper h1").classList.add("showArrow");
+  }, 1500);
 }
