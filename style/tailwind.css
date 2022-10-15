@@ -640,6 +640,10 @@ video {
   right: -2px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -666,6 +670,10 @@ video {
 
 .z-0 {
   z-index: 0;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .col-span-full {
@@ -1079,6 +1087,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .pt-24 {
   padding-top: 6rem;
 }
@@ -1430,6 +1448,10 @@ form button:hover span {
     grid-column: span 2 / span 2;
   }
 
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1491,6 +1513,10 @@ form button:hover span {
 }
 
 @media (min-width: 1024px) {
+  .lg\:right-6 {
+    right: 1.5rem;
+  }
+
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1499,12 +1525,20 @@ form button:hover span {
     margin-bottom: 9rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:h-screen {
     height: 100vh;
   }
 
   .lg\:h-auto {
     height: auto;
+  }
+
+  .lg\:h-20 {
+    height: 5rem;
   }
 
   .lg\:w-9\/12 {
@@ -1519,6 +1553,10 @@ form button:hover span {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .lg\:w-12 {
+    width: 3rem;
   }
 
   .lg\:grid-cols-3 {
