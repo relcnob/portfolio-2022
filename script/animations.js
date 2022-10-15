@@ -104,9 +104,9 @@ function animInit() {
     );
   });
   // about
-  inView("#about", ({ target }) => {
+  inView("#about div", ({ target }) => {
     animate(
-      target.querySelector("div"),
+      target,
       { y: [500, 0], opacity: [0, 1] },
       {
         duration: 1,
