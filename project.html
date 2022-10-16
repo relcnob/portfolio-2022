@@ -64,7 +64,9 @@
       <span class="left-2 bottom-8 w-48 h-16 absolute dotted-bg z-10"></span>
       <span class="menu-bg w-full h-full absolute block bg-zinc-900"></span>
     </section>
-    <main class="w-full p-2 md:p-6 min-h-screen flex flex-col gap-2 md:gap-6">
+    <main
+      class="w-full p-2 md:p-6 min-h-screen flex flex-col gap-2 md:gap-6 overflow-hidden"
+    >
       <section
         class="project-heading flex flex-row flex-wrap gap-2 md:gap-8 items-start xl:items-center w-full justify-start items-center relative mb-2 lg:mb-0"
       >
@@ -73,7 +75,9 @@
         >
           //project name
         </h1>
-        <div class="flex gap-6 sm:gap-8 md:gap-12 items-center w-auto">
+        <div
+          class="project-tags flex gap-6 sm:gap-8 md:gap-12 items-center w-auto"
+        >
           <ul
             class="flex flex-row flex-wrap gap-1 sm:gap-2 md:gap-4 items-center height-100 font-display text-xs md:text-sm pt-1 w-fit"
           >
@@ -146,7 +150,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-12 w-full xl:col-span-2 2xl:col-span-1">
-          <section class="flex flex-row w-100 gap-4 items-center">
+          <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
             <img
               src="assets/temp.jpg"
               class="object-cover aspect-square h-100 w-64 rounded-xl block"
@@ -164,7 +168,9 @@
               </p>
             </div>
           </section>
-          <section class="flex flex-row w-100 gap-4 items-center w-full">
+          <section
+            class="flex flex-col md:flex-row w-100 gap-4 items-center w-full"
+          >
             <img
               src="assets/temp.jpg"
               class="object-cover aspect-square h-100 w-64 rounded-xl block"
@@ -182,7 +188,7 @@
               </p>
             </div>
           </section>
-          <section class="flex flex-row w-100 gap-4 items-center">
+          <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
             <img
               src="assets/temp.jpg"
               class="object-cover aspect-square h-100 w-64 rounded-xl block"
@@ -245,5 +251,6 @@
       <span class="justify-self-end h-4 lg:h-auto w-96 dotted-bg mr-0"></span>
     </footer>
     <script type="module" src="script/main.js"></script>
+    <script type="module" src="script/project.js"></script>
   </body>
 </html>
