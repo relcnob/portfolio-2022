@@ -63,15 +63,6 @@ function animInit() {
     }
   );
 
-  animate(
-    document.querySelector("nav"),
-    { opacity: [0, 1] },
-    {
-      delay: 1,
-      duration: 1,
-      easing: "ease-in-out",
-    }
-  );
   // h2
   inView("h2", ({ target }) => {
     animate(
@@ -140,17 +131,6 @@ function animInit() {
       {
         delay: stagger(0.1),
         duration: 0.6,
-        easing: "ease-in-out",
-      }
-    );
-  });
-
-  inView("footer", ({ target }) => {
-    animate(
-      target,
-      { opacity: [0, 1] },
-      {
-        duration: 1,
         easing: "ease-in-out",
       }
     );

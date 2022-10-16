@@ -1,4 +1,4 @@
-import { animate } from "https://cdn.skypack.dev/motion";
+import { animate, inView } from "https://cdn.skypack.dev/motion";
 
 let menuToggled = false;
 
@@ -57,4 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   });
+  inView("footer", ({ target }) => {
+    animate(
+      target,
+      { opacity: [0, 1] },
+      {
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
+  animate(
+    document.querySelector("nav"),
+    { opacity: [0, 1] },
+    {
+      delay: 1,
+      duration: 1,
+      easing: "ease-in-out",
+    }
+  );
 });
