@@ -125,7 +125,9 @@
             src="assets/temp.jpg"
           />
           <div class="main-project-section flex flex-col">
-            <h2 class="font-display text-2xl my-2">//description</h2>
+            <h2 class="font-display text-2xl my-2 text-rose-500">
+              //description
+            </h2>
             <p class="text-lg mb-12">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
               perferendis accusamus a molestiae rem voluptatibus architecto
@@ -149,79 +151,27 @@
             </a>
           </div>
         </div>
-        <div class="flex flex-col gap-12 w-full xl:col-span-2 2xl:col-span-1">
-          <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
-            <img
-              src="assets/temp.jpg"
-              class="object-cover aspect-square h-100 w-64 rounded-xl block"
-            />
-            <div class="col-span-2 flex flex-col">
-              <h2 class="font-display text-2xl my-2">//feature</h2>
-              <p class="text-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
-                ratione necessitatibus pariatur consequatur iure, voluptatem
-                eaque alias minus eos temporibus neque ullam at nam sapiente
-                eveniet tenetur nulla. Dolores itaque explicabo excepturi
-                quibusdam expedita unde? Excepturi, architecto reiciendis,
-                assumenda ea molestiae iusto, odio nemo itaque accusantium
-                doloribus delectus amet eaque!
-              </p>
-            </div>
-          </section>
-          <section
-            class="flex flex-col md:flex-row w-100 gap-4 items-center w-full"
-          >
-            <img
-              src="assets/temp.jpg"
-              class="object-cover aspect-square h-100 w-64 rounded-xl block"
-            />
-            <div class="col-span-2 flex flex-col">
-              <h2 class="font-display text-2xl my-2">//feature</h2>
-              <p class="text-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
-                ratione necessitatibus pariatur consequatur iure, voluptatem
-                eaque alias minus eos temporibus neque ullam at nam sapiente
-                eveniet tenetur nulla. Dolores itaque explicabo excepturi
-                quibusdam expedita unde? Excepturi, architecto reiciendis,
-                assumenda ea molestiae iusto, odio nemo itaque accusantium
-                doloribus delectus amet eaque!
-              </p>
-            </div>
-          </section>
-          <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
-            <img
-              src="assets/temp.jpg"
-              class="object-cover aspect-square h-100 w-64 rounded-xl block"
-            />
-            <div class="col-span-2 flex flex-col">
-              <h2 class="font-display text-2xl my-2">//feature</h2>
-              <p class="text-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
-                ratione necessitatibus pariatur consequatur iure, voluptatem
-                eaque alias minus eos temporibus neque ullam at nam sapiente
-                eveniet tenetur nulla. Dolores itaque explicabo excepturi
-                quibusdam expedita unde? Excepturi, architecto reiciendis,
-                assumenda ea molestiae iusto, odio nemo itaque accusantium
-                doloribus delectus amet eaque!
-              </p>
-            </div>
-          </section>
-        </div>
+        <div
+          id="features_section"
+          class="flex flex-col gap-12 w-full xl:col-span-2 2xl:col-span-1"
+        ></div>
         <div
           class="project-gallery grid gap-4 grid-cols-1 md:grid-cols-3 mt-4 col-span-1 lg:col-span-full"
         >
-          <h2 class="font-display text-2xl my-2 col-span-full">//gallery</h2>
+          <h2 class="font-display text-2xl my-2 col-span-full text-rose-500">
+            //gallery
+          </h2>
           <img
             src="assets/temp.jpg"
-            class="w-100 block object-cover rounded-xl"
+            class="w-full h-full block object-cover rounded-xl"
           />
           <img
             src="assets/temp.jpg"
-            class="w-100 block object-cover rounded-xl md:col-span-2 md:row-span-2"
+            class="w-full h-full block object-cover rounded-xl md:col-span-2 md:row-span-2"
           />
           <img
             src="assets/temp.jpg"
-            class="w-100 block object-cover rounded-xl"
+            class="w-full h-full block object-cover rounded-xl"
           />
         </div>
       </section>
@@ -250,6 +200,26 @@
       >
       <span class="justify-self-end h-4 lg:h-auto w-96 dotted-bg mr-0"></span>
     </footer>
+    <template id="section_template">
+      <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
+        <img
+          src="assets/temp.jpg"
+          class="object-cover aspect-square h-100 w-64 rounded-xl block"
+        />
+        <div class="col-span-2 flex flex-col">
+          <h2 class="font-display text-2xl my-2 text-rose-500">//feature</h2>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+            ratione necessitatibus pariatur consequatur iure, voluptatem eaque
+            alias minus eos temporibus neque ullam at nam sapiente eveniet
+            tenetur nulla. Dolores itaque explicabo excepturi quibusdam expedita
+            unde? Excepturi, architecto reiciendis, assumenda ea molestiae
+            iusto, odio nemo itaque accusantium doloribus delectus amet eaque!
+          </p>
+        </div>
+      </section>
+    </template>
+    <script type="module" src="script/project-fetch.js"></script>
     <script type="module" src="script/main.js"></script>
     <script type="module" src="script/project.js"></script>
   </body>
