@@ -1106,10 +1106,6 @@ video {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/assets\/arrow-down\.svg\'\)\] {
-  background-image: url('/assets/arrow-down.svg');
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1420,6 +1416,10 @@ header {
 
 .project-tags p:first-of-type:before {
   content: none;
+}
+
+#scrollDown {
+  background-image: url("../assets/arrow-down.svg");
 }
 
 .project-open {
