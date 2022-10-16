@@ -1,4 +1,5 @@
 import { animate, inView, stagger } from "https://cdn.skypack.dev/motion";
+const url = "../assets/projects.json";
 
 document.addEventListener("DOMContentLoaded", () => {
   inView(".project-heading", ({ target }) => {

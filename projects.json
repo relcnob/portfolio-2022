@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "Fonts and UI components",
+    "shortDesc": "In this project the goal was to work with typography and implement a font hierarchy as well as design and layout UI cards.",
+    "fullDesc": "My solution to this assignment was based on the insights I've gained from using the type-scale.com tool. My chosen font - Inter was used both as body font and display font for headers and UI elements. I put a goal for myself to make the headers look distinct enough so that I know that I grasped it well. Working with \"Inter\" font has forced me to make sure that the spacing looks correct, font weights and margins are adjusted in a way where the user can discern the differences at a first glance.<br>As for the second part of the project I designed a responsive UI card including a list of users with provided details. This part of the assignment required me to use a little bit of colors to emphasize which elements are interactive",
+    "link": "https://relcnob.github.io/13c.01.01.fonts-and-components/",
+    "mainPic": "assets/project_1/main.jpg",
+    "features": [
+      {
+        "title": "Major third",
+        "description": "Font sizes used in my project are based on a Major Third scaling, that means that each Header is bigger than the other by 1.25 times. In my opinion together with the Inter font this scaling offers enough variety without making it hard to use in bigger sizes.",
+        "img": "assets/project_1/detail-1.jpg"
+      },
+      {
+        "title": "Grid container",
+        "description": "To provide for flexible card layout I decided to use a automatically expanding grid. To achieve that my solution uses 3 properties assigned to my grid-template-columns CSS property: repeat, autofill and minmax. The last one receives a pixel value which is dividing the container into separate columns.",
+        "img": "assets/project_1/detail-2.jpg"
+      },
+      {
+        "title": "Card layout",
+        "description": "My UI cards were created by using a flexbox property, it allowed me to place each of the elements under the other which helped me with the general spacing. Each of the individual elements then received a specific margin value dependant on their size. Images on the cards were 'forced' into being circles with aspect-ratio and preset border-radius property at 50%. As for the card container itself I used a slightly lighter color than the background, added a barely visible shadow and a bit of rounding on the corners.",
+        "img": "assets/project_1/detail-3.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS"],
+    "mockups": [
+      "assets/project_1/img-1.jpg",
+      "assets/project_1/img-2.jpg",
+      "assets/project_1/img-3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Colors and Animation",
+    "shortDesc": "Goal of this assignment was to work with generated color palettes and apply them to a precreated layout. Later steps of the process included adding animations and creating a 'Dark Mode'.",
+    "fullDesc": "In this assignment I generated a color palette on huemint.com leaning more on the warm color side. The colord I decided to go with were something that I was not really used to but, in a way to challenge myself. The primary color of my design is actually more prominent in the background - dark, desaturated green. The secondary color - orange acts as a secondary color dragging user's attention to important elements, CTA buttons, headers and icons. The last color is this pale blue used as an accent but mostly visible as parts of body text on darker backgrounds. This webpage also includes animations created in both CSS and JavaScript with the use of Motion One library. Before I implemented this color palette I created a sort-of guide based on the 60-30-10 rule, where 60% was taken by the primary color, 30% by secondary and lastly 10% by the accent. As the last element of the process I included a media query altering my website in case of users using a 'Dark Mode' since my website was pretty dark already the changes are rather miniscule.",
+    "link": "https://relcnob.github.io/13c.01.02.colors-and-animations/",
+    "mainPic": "assets/project_2/mockup-main.jpg",
+    "features": [
+      {
+        "title": "Color palette",
+        "description": "Learning about working with color palettes has shown me that with just a little of help from digital tools I'm able to combine colors in one design and make them work together. To provide for good readability of the text I used Adobe Color Contrast Checker, which has shown me which colors to combine together.",
+        "img": "assets/project_2/detail-1.jpg"
+      },
+      {
+        "title": "Motion One",
+        "description": "Most of the animations were created by JavaScript library Motion One. In my previous projects I tended to create my animations with pure CSS, which in many cases tended to get tedious and altered my HTML syntax as specific elements had to be grouped together. With Motion One I could group them together, for example in a inView method which would afterwards play couple of animations for different elements.",
+        "img": "assets/project_2/detail-2.jpg"
+      },
+      {
+        "title": "Dark mode",
+        "description": "To create the Dark Mode of my website I altered the light sections visible in the later part of the page with a use of a CSS media query \"prefers-color-scheme: dark\" which allowed me to check whether the user is using one or not. Inside of it I redeclared the colors used by certain classes, switching from lighter tones to the dark ones.",
+        "img": "assets/project_2/detail-3.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS", "JavaScript", "Motion One"],
+    "mockups": [
+      "assets/project_2/mockup-2.jpg",
+      "assets/project_2/mockup-3.jpg",
+      "assets/project_2/mockup-4.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Responsive Design",
+    "shortDesc": "This project required me to create a responsive webpage using CSS Grid, Flexbox and Media Queries. The website itself includes mock content generated by lorem ipsum and stock photographies from unsplash.com",
+    "fullDesc": "Creating a responsive website is something that should always accompany the coding process, large amount of users will visit the page on their mobile devices or tablets. This assignment was approached by me by creating the desktop version first and then adding some simple media query entries modifying the grid behaviour and spacing between elements of the page. I kept the color palette to black and white so that I could clearly see the layout and remove the distractions which colors would bring.",
+    "link": "https://relcnob.github.io/13c.02.01.responsive-design/",
+    "mainPic": "assets/project_3/mockup-1.jpg",
+    "features": [
+      {
+        "title": "Flexible grid",
+        "description": "To layout the cards visible after the header section of the page I created a flexible CSS Grid based on repeat, autofill and minmax values. This solution proves to be the easiest way to layout cards with even spacings and various amounts. Throughout the process I tested Flexbox solution although with this uneven amount of cards it proved to not be the best way of solving this problem.",
+        "img": "assets/project_3/detail-1.jpg"
+      },
+      {
+        "title": "Responsive images",
+        "description": "To keep imagery used in this project fully responsive I used CSS object-fit property which allowed me to place images exactly where I want them without worrying about stretching or weird scaling. Object-fit: cover makes sure that the image automatically rescales itself that the entire container is filled with the picture, without leaving blank spaces around. This feature is specifically useful if we for example are trying to make rounded user pictures or other preset aspect ratios.",
+        "img": "assets/project_3/detail-2.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS"],
+    "mockups": [
+      "assets/project_3/mockup-1.jpg",
+      "assets/project_3/mockup-2.jpg",
+      "assets/project_3/mockup-3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Designing with Frameworks",
+    "shortDesc": "This project was the first one that I created using Tailwind - a CSS framework. Initially the changes in syntax were hard to grasp but as I went on they became much more easier.",
+    "fullDesc": "Since I had experience with Bootstrap I decided to test myself by trying something new and more complicated - Tailwind. Throughout the process I constantly had to doublecheck Tailwind class names as plenty of times they were varying from what I knew from CSS. Tailwinds approach to media queries proves to be quite nice, as we keep them next to the object and not at the end of the document as in vanilla CSS. From this assignment I've learned that in bigger projects Tailwind might be the preffered way to go as its much easier to keep the styling consistent between many users. ",
+    "link": "https://relcnob.github.io/13C.02.02.designing-with-frameworks/",
+    "mainPic": "assets/project_4/mockup-1.jpg",
+    "features": [
+      {
+        "title": "Tailwind",
+        "description": "As mentioned previously media queries in Tailwind-based projects are much more readible (as long as kept at the end of the class list) and in the long way make the project easier to alter. The npm package comes with an easy way to keep your CSS file clean of unused classes which for the most part is the problem with Bootstrap. My only concern with Tailwind is that more specific or CSS heavy elements tend to have impossibly long class values. Tailwind encourages making the websites mobile first as its preset media query selector documentation suggests to not use prefixes for mobile and use them for everything bigger.",
+        "img": "assets/project_4/detail-1.jpg"
+      },
+      {
+        "title": "Flexibility",
+        "description": "In my experience Tailwind uses just the right amount of variety of values where the entire project seems to be somewhat well put together without putting much thought into it. Even when we fill like a value or the exact width we want is missing we can just provide Tailwind with a custom property or extend our theme by modifying the tailwind.config.js file.",
+        "img": "assets/project_4/detail-2.jpg"
+      },
+      {
+        "title": "Components",
+        "description": "Tailwind doesn't include any free to use components on their website, but there are plenty available for free online. Thanks to those in many cases we can get a website layed out quite quickly before moving onto the styling part. Tailwinds syntax allows for an easy way of creating responsive components as the media queries and other state selectors are included with the rest of the classes, for example: active or hover.",
+        "img": "assets/project_4/detail-3.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS", "JavaScript", "Tailwind", "Motion One"],
+    "mockups": [
+      "assets/project_4/mockup-2.jpg",
+      "assets/project_4/mockup-3.jpg",
+      "assets/project_4/mockup-4.jpg"
+    ]
+  }
+]
