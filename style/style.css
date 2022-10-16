@@ -117,7 +117,9 @@ header {
 .project-tags p:first-of-type:before {
   content: none;
 }
-
+#scrollDown {
+  background-image: url("/assets/arrow-down.svg");
+}
 .project-open {
   display: flex;
   width: 3rem;
