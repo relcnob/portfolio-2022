@@ -105,7 +105,46 @@
     <main>
       <section id="works" class="lg:h-screen p-6 pt-24 flex flex-col">
         <h2 class="text-4xl md:text-5xl col-span-full font-display">//works</h2>
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 h-full py-8 gap-8">
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 h-full py-16 gap-8">
+          <article
+            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+          >
+            <h3 class="text-2xl mb-2 px-4 pt-4 z-10 font-display">
+              project name
+            </h3>
+            <section
+              class="project-tags flex flex-row text-sm mb-6 px-4 z-10 font-display"
+            >
+              <p class="mr-1">HTML</p>
+              <p class="mr-1">CSS</p>
+              <p class="mr-1">JS</p>
+              <p class="mr-1">Tailwind</p>
+            </section>
+            <p class="project-short-desc text-md grow px-4 z-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              possimus quos fugiat recusandae, nisi nulla, incidunt
+              necessitatibus eius quam eligendi nam commodi quaerat
+              voluptatibus. Unde?
+            </p>
+            <a
+              href="project.html"
+              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
+              ><span></span><span></span
+            ></a>
+            <div
+              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
+            ></div>
+            <span
+              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
+            <img
+              src="assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 brightness-30 grayscale duration-300"
+            />
+          </article>
           <article
             class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
           >
@@ -132,6 +171,9 @@
             ></div>
             <span
               class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
             ></span>
             <img
               src="assets/temp.jpg"
@@ -165,6 +207,9 @@
             <span
               class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
             ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
             <img
               src="assets/temp.jpg"
               class="absolute w-full h-full block object-cover z-0 brightness-30"
@@ -174,7 +219,9 @@
             class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
           >
             <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
-            <section class="project-tags flex flex-row text-sm mb-6 px-4 z-10">
+            <section
+              class="project-tags flex flex-row text-sm mb-6 px-4 z-10 font-display"
+            >
               <p class="mr-1">HTML</p>
               <p class="mr-1">CSS</p>
               <p class="mr-1">JS</p>
@@ -197,37 +244,8 @@
             <span
               class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
             ></span>
-            <img
-              src="assets/temp.jpg"
-              class="absolute w-full h-full block object-cover z-0 brightness-30"
-            />
-          </article>
-          <article
-            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
-          >
-            <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
-            <section class="project-tags flex flex-row text-sm mb-6 px-4 z-10">
-              <p class="mr-1">HTML</p>
-              <p class="mr-1">CSS</p>
-              <p class="mr-1">JS</p>
-              <p class="mr-1">Tailwind</p>
-            </section>
-            <p class="project-short-desc text-md grow px-4 z-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              possimus quos fugiat recusandae, nisi nulla, incidunt
-              necessitatibus eius quam eligendi nam commodi quaerat
-              voluptatibus. Unde?
-            </p>
-            <a
-              href="project.html"
-              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
-              ><span></span><span></span
-            ></a>
-            <div
-              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
-            ></div>
             <span
-              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
             ></span>
             <img
               src="assets/temp.jpg"
@@ -238,7 +256,7 @@
       </section>
       <section
         id="about"
-        class="p-6 py-4 md:py-12 lg:py-24 lg:h-screen flex flex-col dotted-bg overflow-hidden"
+        class="p-6 py-4 md:py-12 lg:py-24 lg:h-screen flex flex-col overflow-hidden dotted-bg-dark"
       >
         <h2 class="text-4xl md:text-5xl col-span-full font-display mb-4">
           //about
@@ -360,7 +378,7 @@
           </form>
         </section>
         <span
-          class="absolute w-72 h-48 lg:h-20 striped-bg bottom-0 md:bottom-2 left-4 z-0"
+          class="absolute h-48 lg:h-20 striped-bg bottom-0 md:bottom-2 left-4 z-0"
         ></span>
         <span
           class="absolute w-12 h-96 striped-bg top-24 right-4 lg:right-6 z-0"
@@ -392,7 +410,7 @@
       <span class="justify-self-end h-4 lg:h-auto w-96 dotted-bg mr-0"></span>
     </footer>
 
-    <script src="script/main.js"></script>
+    <script type="module" src="script/main.js"></script>
     <script type="module" src="script/animations.js"></script>
   </body>
 </html>

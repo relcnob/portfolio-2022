@@ -87,12 +87,19 @@ header {
   transition: 500ms;
 }
 
+.dotted-bg-dark {
+  background: transparent(24 24 27);
+  background-image: radial-gradient(rgb(66, 66, 66) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: -6px -6px;
+}
 .dotted-bg {
-  background: rgb(24 24 27);
+  background: transparent(24 24 27);
   background-image: radial-gradient(rgb(194, 194, 194) 1px, transparent 0);
   background-size: 24px 24px;
   background-position: -6px -6px;
 }
+
 .striped-bg {
   background: repeating-linear-gradient(
     -45deg,
@@ -146,7 +153,7 @@ header {
 }
 
 .project-short-desc {
-  transform: translateX(0px);
+  transform: translateY(0px);
   transition: 0.5s ease-in-out;
   opacity: 1;
 }
@@ -157,6 +164,12 @@ header {
 }
 .project-card:hover .project-card-cover {
   opacity: 1;
+}
+.project-card img {
+  transition: 300ms;
+}
+.project-card:hover img {
+  filter: grayscale(0) brightness(0.4);
 }
 
 #header-nav {
@@ -180,19 +193,48 @@ header {
   color: rgb(244 63 94);
 }
 
-form button span {
+form button span,
+.main-project-section a span {
   opacity: 0;
 }
 
-form button:hover span {
+form button:hover span,
+.main-project-section a:hover span {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   opacity: 1;
 }
 
+.project-return-button:hover span {
+  background-color: rgb(24 24 27);
+}
+.project-return-button span {
+  transform-origin: left;
+  transition: 500ms cubic-bezier(0.78, -0.18, 0.32, 1.15);
+}
+.project-return-button:hover span:nth-of-type(2) {
+  transform: rotate(0);
+  margin-left: -0.4rem;
+}
+
+.project-return-button:hover span:nth-of-type(3) {
+  transform: rotate(0);
+  margin-left: -0.4rem;
+}
+
+.project-return-button span:nth-of-type(2) {
+  transform: rotate(35deg);
+  margin-left: -0.4rem;
+}
+
+.project-return-button span:nth-of-type(3) {
+  transform: rotate(-35deg);
+  margin-left: -0.4rem;
+}
+
 @media screen and (min-width: 1280px) {
   .project-short-desc {
-    transform: translateX(300px);
+    transform: translateY(24px);
     transition: 0.5s ease-in-out;
     opacity: 0;
   }

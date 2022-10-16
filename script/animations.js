@@ -115,6 +115,36 @@ function animInit() {
     );
   });
 
+  inView("#contact span.striped-bg:first-of-type", ({ target }) => {
+    console.log(target);
+    animate(
+      target,
+      {
+        width: ["0%", "20%"],
+      },
+      {
+        delay: stagger(0.1),
+        duration: 0.6,
+        easing: "ease-in-out",
+      }
+    );
+  });
+
+  inView("#contact span.striped-bg:last-of-type", ({ target }) => {
+    console.log(target);
+    animate(
+      target,
+      {
+        height: ["0%", "30%"],
+      },
+      {
+        delay: stagger(0.1),
+        duration: 0.6,
+        easing: "ease-in-out",
+      }
+    );
+  });
+
   inView("footer", ({ target }) => {
     animate(
       target,
@@ -165,62 +195,7 @@ function animInit() {
     }
   });
 
-  // header nav
-  const observer = new IntersectionObserver(
-    ([e]) => e.target.classList.toggle(`isSticky`, e.intersectionRatio < 1),
-    {
-      threshold: [1],
-    }
-  );
-  observer.observe(document.querySelector("nav"));
-  // burger
-
-  document.querySelector("nav label").addEventListener("mousedown", () => {
-    if (menuToggled === false) {
-      console.log(menuToggled);
-      menuToggled = true;
-
-      animate(
-        document.querySelector("#header-nav"),
-        {
-          transform: ["translateX(100vw)", "translateX(0)"],
-        },
-        {
-          duration: 0.7,
-          easing: "ease-in-out",
-        }
-      );
-    } else {
-      menuToggled = false;
-      animate(
-        document.querySelector("#header-nav"),
-        {
-          transform: ["translateX(0)", "translateX(100vw)"],
-        },
-        {
-          duration: 0.7,
-          easing: "ease-in-out",
-        }
-      );
-    }
-  });
-
-  document.querySelectorAll("#header-nav ul li a").forEach((element) => {
-    element.addEventListener("click", () => {
-      menuToggled = false;
-      animate(
-        document.querySelector("#header-nav"),
-        {
-          transform: ["translateX(0)", "translateX(100vw)"],
-        },
-        {
-          duration: 0.7,
-          easing: "ease-in-out",
-        }
-      );
-    });
-  });
-
+  // header
   setTimeout(() => {
     document.querySelector(".lastName-wrapper h1").classList.add("showArrow");
   }, 1500);
