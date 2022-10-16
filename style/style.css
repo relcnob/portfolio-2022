@@ -118,7 +118,7 @@ header {
   content: none;
 }
 #scrollDown {
-  background-image: url("/assets/arrow-down.svg");
+  background-image: url("../assets/arrow-down.svg");
 }
 .project-open {
   display: flex;
