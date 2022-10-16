@@ -27,6 +27,10 @@
 .font-display {
   font-family: "JetBrains Mono", monospace;
 }
+
+body {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -59,6 +63,51 @@ nav label span,
 header {
   width: 100%;
   height: calc(100vh - 5rem);
+}
+
+.lastName-wrapper h1 {
+  display: flex;
+}
+
+.lastName-wrapper h1:after {
+  content: "<";
+  transform: scaleX(0.8) scaleY(1.1);
+  display: block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: 500ms;
+  position: absolute;
+  left: 100%;
+  margin-left: -0.7rem;
+  opacity: 0;
+}
+
+.showArrow:after {
+  opacity: 1 !important;
+  transition: 500ms;
+}
+
+.dotted-bg-dark {
+  background: transparent(24 24 27);
+  background-image: radial-gradient(rgb(66, 66, 66) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: -6px -6px;
+}
+.dotted-bg {
+  background: transparent(24 24 27);
+  background-image: radial-gradient(rgb(194, 194, 194) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: -6px -6px;
+}
+
+.striped-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgb(225, 226, 230) 18px,
+    rgb(225, 226, 230) 36px
+  );
 }
 
 .project-tags p:before {
@@ -104,18 +153,94 @@ header {
 }
 
 .project-short-desc {
-  transform: translateX(300px);
+  transform: translateY(0px);
   transition: 0.5s ease-in-out;
-  opacity: 0;
-}
-.project-card:hover .project-short-desc {
-  transform: translateX(0);
   opacity: 1;
 }
+
 .project-card-cover {
   opacity: 0;
   transition: 0.5s ease-in-out;
 }
 .project-card:hover .project-card-cover {
   opacity: 1;
+}
+.project-card img {
+  transition: 300ms;
+}
+.project-card:hover img {
+  filter: grayscale(0) brightness(0.4);
+}
+
+#header-nav {
+  margin-top: -6rem;
+  height: calc(100vh + 3rem);
+  transform: translateX(100vw);
+}
+#header-nav ul li a:before {
+  content: "//";
+  display: inline-block;
+  overflow: hidden;
+  transform: scaleY(0.8) translateX(-10px);
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 300ms;
+  color: rgb(244 63 94);
+}
+#header-nav ul li a:hover:before {
+  transform: scaleY(0.8) translateX(0);
+  opacity: 1;
+  color: rgb(244 63 94);
+}
+
+form button span,
+.main-project-section a span {
+  opacity: 0;
+}
+
+form button:hover span,
+.main-project-section a:hover span {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 1;
+}
+
+.project-return-button:hover span {
+  background-color: rgb(24 24 27);
+}
+.project-return-button span {
+  transform-origin: left;
+  transition: 500ms cubic-bezier(0.78, -0.18, 0.32, 1.15);
+}
+.project-return-button:hover span:nth-of-type(2) {
+  transform: rotate(0);
+  margin-left: -0.4rem;
+}
+
+.project-return-button:hover span:nth-of-type(3) {
+  transform: rotate(0);
+  margin-left: -0.4rem;
+}
+
+.project-return-button span:nth-of-type(2) {
+  transform: rotate(35deg);
+  margin-left: -0.4rem;
+}
+
+.project-return-button span:nth-of-type(3) {
+  transform: rotate(-35deg);
+  margin-left: -0.4rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .project-short-desc {
+    transform: translateY(24px);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .project-card:hover .project-short-desc {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

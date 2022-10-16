@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fryderyk Boncler // portfolio</title>
-    <link rel="stylesheet" href="/style/tailwind.css" />
+    <link rel="stylesheet" href="style/tailwind.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,18 +18,55 @@
       id="nav"
       class="flex flex-row justify-between w-full align-center items-center sticky duration-300 z-[100]"
     >
-      <a href="#" class="flex items-center h-10">relcnob</a>
+      <a href="#" class="flex items-center h-10 text-2xl">relcnob</a>
       <label
-        class="grid grid-cols-2 w-10 h-10 hover:w-8 hover:h-8 hover:m-1 duration-300 cursor-pointer items-center justify-center justify-items-center"
+        class="grid grid-cols-2 w-10 h-10 hover:w-8 hover:h-8 hover:m-1 duration-300 cursor-pointer items-center justify-center justify-items-center z-[120]"
       >
         <span class="bg-gray-100"></span><span class="bg-gray-100"></span
         ><span class="bg-gray-100"></span><span class="bg-gray-100"></span>
       </label>
-      <section id="header-nav" class="absolute"></section>
     </nav>
     <section
+      id="header-nav"
+      class="fixed w-full h-full z-[90] gap-4 text-center flex flex-col items-center justify-center"
+    >
+      <ul class="z-10 flex flex-col gap-4">
+        <li>
+          <a
+            class="font-display text-2xl duration-300 hover:text-rose-500 flex flex-row items-center no-wrap"
+            href="index.html#body"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-display text-2xl duration-300 hover:text-rose-500 flex flex-row items-center no-wrap"
+            href="index.html#works"
+            >WORKS</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-display text-2xl duration-300 hover:text-rose-500 flex flex-row items-center no-wrap"
+            href="index.html#about"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-display text-2xl duration-300 hover:text-rose-500 flex flex-row items-center no-wrap"
+            href="index.html#contact"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+      <span class="right-2 bottom-8 w-4 h-48 absolute dotted-bg z-10"></span>
+      <span class="left-2 bottom-8 w-48 h-16 absolute dotted-bg z-10"></span>
+      <span class="menu-bg w-full h-full absolute block bg-zinc-900"></span>
+    </section>
+    <section
       id="sticky-nav"
-      class="fixed right-[0.4rem] flex flex-col gap-2 h-auto top-1/2 z-50"
+      class="fixed right-[0.4rem] flex-col gap-2 h-auto top-1/2 z-50 hidden md:flex"
     >
       <a
         href="#body"
@@ -49,23 +86,67 @@
       ></a>
     </section>
     <header class="flex flex-col justify-center px-4 relative">
-      <h1 class="text-9xl">fryderyk</h1>
-      <h1 class="text-9xl">boncler</h1>
-      <p class="text-2xl text-rose-500 ml-2 font-display">
+      <h1 class="text-7xl md:text-9xl z-10">fryderyk</h1>
+      <div class="w-fit lastName-wrapper relative">
+        <h1 class="text-7xl md:text-9xl z-10">boncler</h1>
+      </div>
+      <p class="text-md md:text-2xl text-rose-500 ml-2 font-display z-[5]">
         //frontend developer
       </p>
       <span
-        class="absolute w-6 h-6 flex justify-items-center items-center bg-gray-100 bottom-0 right-1/2 z-10"
+        class="absolute right-8 bottom-4 w-4/12 h-48 striped-bg origin-right"
+      ></span>
+      <span
+        class="absolute w-12 h-12 flex justify-items-center items-center bg-[url('/assets/arrow-down.svg')] bg-contain bg-center bg-no-repeat bottom-0 right-1/2 z-10"
       >
         <a href="#works" class="w-full h-full block"></a
       ></span>
     </header>
     <main>
-      <section id="works" class="h-screen p-6 pt-24 flex flex-col">
-        <h2 class="text-5xl col-span-full font-display">//works</h2>
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 h-full py-24 gap-8">
+      <section id="works" class="lg:h-screen p-6 pt-24 flex flex-col">
+        <h2 class="text-4xl md:text-5xl col-span-full font-display">//works</h2>
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 h-full py-16 gap-8">
           <article
-            class="project-card w-full h-full rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+          >
+            <h3 class="text-2xl mb-2 px-4 pt-4 z-10 font-display">
+              project name
+            </h3>
+            <section
+              class="project-tags flex flex-row text-sm mb-6 px-4 z-10 font-display"
+            >
+              <p class="mr-1">HTML</p>
+              <p class="mr-1">CSS</p>
+              <p class="mr-1">JS</p>
+              <p class="mr-1">Tailwind</p>
+            </section>
+            <p class="project-short-desc text-md grow px-4 z-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              possimus quos fugiat recusandae, nisi nulla, incidunt
+              necessitatibus eius quam eligendi nam commodi quaerat
+              voluptatibus. Unde?
+            </p>
+            <a
+              href="project.html"
+              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
+              ><span></span><span></span
+            ></a>
+            <div
+              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
+            ></div>
+            <span
+              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
+            <img
+              src="assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 brightness-30 grayscale duration-300"
+            />
+          </article>
+          <article
+            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
           >
             <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
             <section class="project-tags flex flex-row text-sm mb-6 px-4 z-10">
@@ -88,31 +169,248 @@
             <div
               class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
             ></div>
+            <span
+              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
             <img
-              src="/assets/temp.jpg"
-              class="absolute w-full h-full block object-cover z-0 opacity-25"
+              src="assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 brightness-30"
             />
           </article>
           <article
-            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
-          ></article>
+            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+          >
+            <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
+            <section class="project-tags flex flex-row text-sm mb-6 px-4 z-10">
+              <p class="mr-1">HTML</p>
+              <p class="mr-1">CSS</p>
+              <p class="mr-1">JS</p>
+              <p class="mr-1">Tailwind</p>
+            </section>
+            <p class="project-short-desc text-md grow px-4 z-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              possimus quos fugiat recusandae, nisi nulla, incidunt
+              necessitatibus eius quam eligendi nam commodi quaerat
+              voluptatibus. Unde?
+            </p>
+            <a
+              href="project.html"
+              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
+              ><span></span><span></span
+            ></a>
+            <div
+              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
+            ></div>
+            <span
+              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
+            <img
+              src="assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 brightness-30"
+            />
+          </article>
           <article
-            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
-          ></article>
-          <article
-            class="w-full h-full rounded-2xl border-solid border-2 border-gray-100"
-          ></article>
+            class="project-card w-full h-full pb-24 rounded-2xl border-solid border-2 border-gray-100 flex flex-col relative overflow-hidden"
+          >
+            <h3 class="text-2xl mb-2 px-4 pt-4 z-10">project name</h3>
+            <section
+              class="project-tags flex flex-row text-sm mb-6 px-4 z-10 font-display"
+            >
+              <p class="mr-1">HTML</p>
+              <p class="mr-1">CSS</p>
+              <p class="mr-1">JS</p>
+              <p class="mr-1">Tailwind</p>
+            </section>
+            <p class="project-short-desc text-md grow px-4 z-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              possimus quos fugiat recusandae, nisi nulla, incidunt
+              necessitatibus eius quam eligendi nam commodi quaerat
+              voluptatibus. Unde?
+            </p>
+            <a
+              href="project.html"
+              class="project-open absolute border-solid border-2 border-gray-100 cursor-pointer z-10"
+              ><span></span><span></span
+            ></a>
+            <div
+              class="project-card-cover absolute w-full h-3/5 block bg-gradient-to-b from-zinc-900 to-transparent z-[5]"
+            ></div>
+            <span
+              class="w-36 h-6 skew-x-[36deg] absolute left-[-12px] bottom-0 bg-gray-100 z-50"
+            ></span>
+            <span
+              class="w-28 h-36 absolute bottom-0 left-2 dotted-bg z-10 opacity-30"
+            ></span>
+            <img
+              src="assets/temp.jpg"
+              class="absolute w-full h-full block object-cover z-0 brightness-30"
+            />
+          </article>
         </div>
       </section>
-      <section id="about" class="p-4 pt-24 h-screen">
-        <h2 class="text-5xl col-span-full font-display">//about</h2>
+      <section
+        id="about"
+        class="p-6 py-4 md:py-12 lg:py-24 lg:h-screen flex flex-col overflow-hidden dotted-bg-dark"
+      >
+        <h2 class="text-4xl md:text-5xl col-span-full font-display mb-4">
+          //about
+        </h2>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 w-full md:w-11/12 lg:w-9/12 m-auto bg-zinc-900 border-solid border-2 border-rose-500 rounded-2xl overflow-hidden"
+        >
+          <section class="p-4">
+            <img
+              src="assets/temp.jpg"
+              class="object-cover aspect-square m-auto"
+            />
+          </section>
+          <section
+            class="p-4 border-y-2 md:border-l-[1px] md:border-y-0 lg:border-x-2 border-rose-500"
+          >
+            <h3 class="font-display text-2xl mb-4">:ABOUT</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              fuga, soluta repudiandae consequuntur nemo voluptatibus, nihil
+              ipsam accusantium eos nulla natus voluptas incidunt libero dolor
+              asperiores ad. Aliquid iusto tempora id quam, eius molestias
+              minima ut in, at commodi tempore odit unde autem debitis rem
+              consequatur quod cumque veritatis soluta esse.
+              <br /><br />
+              Voluptates numquam dolorum expedita inventore! Modi eos est cumque
+              amet explicabo expedita fuga incidunt soluta dolore, tenetur vero
+              libero placeat maxime quas nemo perspiciatis rerum iusto ut nobis
+              voluptatibus ipsam doloremque? Eaque rem amet nam odio, dolores
+              maiores facere eum dicta. Qui suscipit eius vitae. Nam ab suscipit
+              corrupti.
+            </p>
+          </section>
+          <section
+            class="p-4 relative overflow-hidden md:col-span-2 lg:col-span-1 md:border-t-[1px] lg:border-t-0 md:border-rose-500"
+          >
+            <h3 class="font-display text-2xl mb-4">:SKILLS</h3>
+            <ul class="flex flex-col gap-2">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+            <span
+              class="w-36 h-4 skew-x-[-36deg] absolute right-[-12px] bottom-0 bg-rose-500 z-50"
+            ></span>
+          </section>
+        </div>
       </section>
-      <section id="contact" class="p-4 pt-24 h-screen">
-        <h2 class="text-5xl col-span-full font-display">//contact</h2>
+      <section
+        id="contact"
+        class="p-6 py-24 h-auto lg:h-screen overflow-hidden relative"
+      >
+        <h2
+          class="text-4xl md:text-5xl col-span-full font-display mb-24 lg:mb-36"
+        >
+          //contact
+        </h2>
+
+        <section class="w-full lg:w-3/6 m-auto z-10 relative">
+          <form
+            action="#"
+            class="flex flex-col gap-6 border-2 border-zinc-700 py-6 px-12 overflow-hidden rounded-2xl bg-zinc-900"
+          >
+            <div>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-100 font-display"
+                >//your email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="bg-zinc-800 border border-zinc-700 text-gray-100 text-sm rounded block w-full p-2.5 focus:outline-0 focus:ring-1 focus:ring-offset-2 ring-offset-zinc-900 ring-rose-500 hover:ring-rose-400"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="subject"
+                class="block mb-2 text-sm font-medium text-gray-100 font-display"
+                >//subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                class="bg-zinc-800 border border-zinc-700 text-gray-100 text-sm rounded block w-full p-2.5 focus:outline-0 focus:ring-1 focus:ring-offset-2 ring-offset-zinc-900 ring-rose-500 hover:ring-rose-400"
+                placeholder="Let me know what you need"
+                required
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-100 font-display"
+                >//your message</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="block bg-zinc-800 border border-zinc-700 text-gray-100 text-sm rounded block w-full p-2.5 min-h-[6rem] max-h-72 focus:outline-0 focus:ring-1 focus:ring-offset-2 ring-offset-zinc-900 ring-rose-500 hover:ring-rose-400"
+                placeholder="Describe your idea"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="flex relative px-6 py-3 box-border text-sm text-center text-gray-100 font-display border-2 border-zinc-800 w-full lg:w-fit mx-auto duration-300 justify-center active:translate-y-1 active:text-rose-500"
+            >
+              <span
+                class="absolute w-0 h-0 border-l-2 border-t-2 border-rose-500 top-[-2px] left-[-2px] duration-300"
+              ></span>
+              Send message
+              <span
+                class="absolute w-0 h-0 border-r-2 border-b-2 border-rose-500 bottom-[-2px] right-[-2px] duration-300"
+              ></span>
+            </button>
+          </form>
+        </section>
+        <span
+          class="absolute h-48 lg:h-20 striped-bg bottom-0 md:bottom-2 left-4 z-0"
+        ></span>
+        <span
+          class="absolute w-12 h-96 striped-bg top-24 right-4 lg:right-6 z-0"
+        ></span>
       </section>
     </main>
-    <footer id="footer"></footer>
+    <footer
+      id="footer"
+      class="px-4 py-4 md:py-0 mt-12 md:mt-4 lg:mt-0 font-display text-sm text-rose-400 grid lg:grid-cols-3 justify-between gap-4"
+    >
+      <span>// 2022 &copy; fryderyk boncler</span>
+      <span class="flex flex-col md:flex-row gap-4 justify-center"
+        ><a
+          class="duration-300 hover:text-rose-300"
+          href="https://github.com/relcnob"
+          target="_blank"
+          >GitHub</a
+        ><a
+          class="duration-300 hover:text-rose-300"
+          href="https://www.linkedin.com/in/fryderyk-boncler-4b82b0124/"
+          target="_blank"
+          >LinkedIn</a
+        ><a
+          class="duration-300 hover:text-rose-300"
+          href="mailto:contact@relcnob.com"
+          >contact@relcnob.com</a
+        ></span
+      >
+      <span class="justify-self-end h-4 lg:h-auto w-96 dotted-bg mr-0"></span>
+    </footer>
 
-    <script src="/script/main.js"></script>
+    <script type="module" src="script/main.js"></script>
+    <script type="module" src="script/animations.js"></script>
   </body>
 </html>
