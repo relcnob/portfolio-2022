@@ -636,8 +636,28 @@ video {
   right: 1rem;
 }
 
-.left-\[-12px\] {
-  left: -12px;
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
+.right-\[-24px\] {
+  right: -24px;
+}
+
+.right-\[10px\] {
+  right: 10px;
+}
+
+.right-\[24px\] {
+  right: 24px;
+}
+
+.right-\[-16px\] {
+  right: -16px;
+}
+
+.right-\[-20px\] {
+  right: -20px;
 }
 
 .z-\[100\] {
@@ -827,16 +847,26 @@ video {
   height: 2px;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .max-h-72 {
   max-height: 18rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .min-h-\[6rem\] {
   min-height: 6rem;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.min-h-max {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
 }
 
 .min-h-\[3rem\] {
@@ -885,10 +915,6 @@ video {
   width: 24rem;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
 .w-auto {
   width: auto;
 }
@@ -915,6 +941,30 @@ video {
   min-width: 3rem;
 }
 
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.max-w-\[70\%\] {
+  max-width: 70%;
+}
+
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -925,11 +975,6 @@ video {
 
 .skew-x-\[-36deg\] {
   --tw-skew-x: -36deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.skew-x-\[36deg\] {
-  --tw-skew-x: 36deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1003,6 +1048,18 @@ video {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-48 {
+  gap: 12rem;
+}
+
+.gap-52 {
+  gap: 13rem;
 }
 
 .justify-self-end {
@@ -1219,6 +1276,10 @@ video {
   padding-top: 0.25rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1408,6 +1469,46 @@ header {
     rgb(225, 226, 230) 18px,
     rgb(225, 226, 230) 36px
   );
+  transition: 300ms;
+}
+
+.striped-bg-rose {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgb(244 63 94) 18px,
+    rgb(244 63 94) 36px
+  );
+  transition: 300ms;
+}
+
+.project-card .striped-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgb(63 63 70) 18px,
+    rgb(63 63 70) 36px
+  );
+}
+
+.project-card:hover .striped-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgb(225, 226, 230) 18px,
+    rgb(225, 226, 230) 36px
+  );
+}
+
+.project-card .dotted-bg {
+  opacity: 0;
+}
+
+.project-card:hover .dotted-bg {
+  opacity: 0.5;
 }
 
 .project-tags p:before {
@@ -1430,7 +1531,7 @@ header {
   align-items: center;
   right: 1rem;
   bottom: 1rem;
-  border-radius: 50%;
+  border-radius: 0.1rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -1439,7 +1540,7 @@ header {
   height: 2px;
   width: 60%;
   background-color: white;
-  transition: 0.5s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 
 .project-open span:first-of-type {
@@ -1447,13 +1548,20 @@ header {
 }
 
 .project-open:hover {
-  transform: scale(1.1) rotate(270deg);
   background-color: white;
 }
 
 .project-open:hover span {
   background-color: rgb(24 24 27);
-  height: 3px;
+  height: 2px;
+}
+
+.project-open:hover span:first-of-type {
+  transform: rotate(270deg);
+}
+
+.project-open:hover span:last-of-type {
+  transform: rotate(180deg);
 }
 
 .project-short-desc {
@@ -1566,6 +1674,11 @@ form button:hover span,
 
 .hover\:w-8:hover {
   width: 2rem;
+}
+
+.hover\:border-gray-100:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
 .hover\:bg-gray-100:hover {
@@ -1834,6 +1947,14 @@ form button:hover span,
     grid-column: span 2 / span 2;
   }
 
+  .xl\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .xl\:max-w-\[60\%\] {
+    max-width: 60%;
+  }
+
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1842,12 +1963,28 @@ form button:hover span,
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
   .xl\:items-center {
     align-items: center;
   }
 
   .xl\:gap-12 {
     gap: 3rem;
+  }
+
+  .xl\:gap-52 {
+    gap: 13rem;
+  }
+
+  .xl\:gap-y-52 {
+    row-gap: 13rem;
+  }
+
+  .xl\:border-t-0 {
+    border-top-width: 0px;
   }
 
   .xl\:text-5xl {
@@ -1861,7 +1998,19 @@ form button:hover span,
     grid-column: span 1 / span 1;
   }
 
+  .\32xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .\32xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\32xl\:flex-row {
+    flex-direction: row;
   }
 }

@@ -18,7 +18,7 @@ async function loadProject() {
     const litag = document.createElement("li");
     litag.textContent = tag;
     litag.classList.value =
-      "border-2 border-solid px-3 md:px-4 lg:px-8 py-3 rounded-3xl";
+      "border-2 border-solid px-3 md:px-4 lg:px-8 py-3 rounded";
     document.querySelector(".project-tags ul").appendChild(litag);
   });
   document.querySelector(".main-image").src = project.mainPic;
