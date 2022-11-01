@@ -2,8 +2,31 @@ window.addEventListener("DOMContentLoaded", initFech);
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const fetchedId = urlParams.get("id");
-function initFech() {
-  loadProject();
+
+import { animate, stagger } from "https://cdn.skypack.dev/motion";
+animate(
+  document.querySelector(".loader span"),
+  {
+    transform: ["rotate(0)", "rotate(3turn)"],
+  },
+  {
+    duration: 4,
+  }
+);
+
+async function initFech() {
+  await loadProject();
+  setTimeout;
+  animate(
+    document.querySelector(".loader"),
+    {
+      transform: ["scale(1)", "scale(0)"],
+    },
+    {
+      stagger: 1,
+      duration: 0.3,
+    }
+  );
 }
 
 async function loadProject() {

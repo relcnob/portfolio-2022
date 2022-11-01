@@ -14,6 +14,11 @@
     />
   </head>
   <body class="bg-zinc-900 text-gray-100 font-body">
+    <div
+      class="loader flex justify-center items-center bg-zinc-900 w-full h-screen fixed z-[999]"
+    >
+      <span class="w-12 h-12 border-2 border-solid border-gray-100"></span>
+    </div>
     <nav
       id="nav"
       class="flex flex-row justify-between w-full align-center items-center sticky duration-300 z-[100]"
@@ -60,7 +65,7 @@
           >
         </li>
       </ul>
-      <span class="right-2 bottom-8 w-4 h-48 absolute dotted-bg z-10"></span>
+      <span class="right-2 bottom-8 w-4 h-36 absolute dotted-bg z-10"></span>
       <span class="left-2 bottom-8 w-48 h-16 absolute dotted-bg z-10"></span>
       <span class="menu-bg w-full h-full absolute block bg-zinc-900"></span>
     </section>
@@ -79,7 +84,7 @@
           class="project-tags flex gap-6 sm:gap-8 md:gap-12 items-center w-auto"
         >
           <ul
-            class="flex flex-row flex-wrap gap-1 sm:gap-2 md:gap-4 items-center height-100 font-display text-xs md:text-sm pt-1 w-fit"
+            class="flex flex-row flex-wrap gap-0.5 md:gap-1 items-center height-100 font-display text-xs md:text-sm pt-1 w-fit"
           >
             <li class="border-2 border-solid px-3 md:px-4 lg:px-8 py-3 rounded">
               HTML
@@ -100,7 +105,7 @@
         >
           <a
             href="index.html#works"
-            class="w-full h-full flex items-center justify-center project-return-button"
+            class="w-full h-full flex items-center justify-center project-return-button box-border"
           >
             <span class="w-5 h-[2px] bg-gray-100 block absolute"></span>
             <span class="w-3 h-[2px] bg-gray-100 block absolute"></span>
@@ -119,7 +124,7 @@
             src="assets/temp.jpg"
           />
           <div class="main-project-section flex flex-col">
-            <h2 class="font-display text-2xl my-2 text-rose-500">
+            <h2 class="font-display text-3xl my-4 text-rose-500">
               //Description
             </h2>
             <p class="text-lg mb-12">
@@ -147,23 +152,26 @@
         </div>
         <div
           id="features_section"
-          class="flex flex-col gap-12 w-full xl:col-span-2 2xl:col-span-2"
+          class="flex flex-col gap-24 w-full xl:col-span-2 2xl:col-span-2"
         ></div>
         <div
           class="project-gallery grid gap-4 grid-cols-1 md:grid-cols-3 mt-4 col-span-1 lg:col-span-full w-full"
         >
-          <h2 class="font-display text-2xl my-2 col-span-full text-rose-500">
+          <h2 class="font-display text-3xl my-4 col-span-full text-rose-500">
             //Gallery
           </h2>
           <img
+            loading="lazy"
             src="assets/temp.jpg"
             class="w-full h-full block object-cover rounded"
           />
           <img
+            loading="lazy"
             src="assets/temp.jpg"
             class="w-full h-full block object-cover rounded md:col-span-2 md:row-span-2"
           />
           <img
+            loading="lazy"
             src="assets/temp.jpg"
             class="w-full h-full block object-cover rounded"
           />
@@ -195,14 +203,17 @@
       <span class="justify-self-end h-4 lg:h-auto w-96 dotted-bg mr-0"></span>
     </footer>
     <template id="section_template">
-      <section class="flex flex-col md:flex-row w-100 gap-4 items-center">
+      <section
+        class="flex flex-col md:flex-row w-100 gap-4 xl:gap-24 items-center"
+      >
         <img
+          loading="lazy"
           src="assets/temp.jpg"
-          class="object-cover aspect-square h-100 w-64 rounded block"
+          class="object-cover aspect-square h-full w-64 lg:w-96 xl:w-[42rem] rounded block"
         />
         <div class="col-span-2 flex flex-col">
-          <h2 class="font-display text-2xl my-2 text-rose-500">//feature</h2>
-          <p class="text-lg xl:max-w-[60%]">
+          <h2 class="font-display text-3xl my-4 text-rose-500">//feature</h2>
+          <p class="text-lg max-w-full 2xl:max-w-[70%]">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
             ratione necessitatibus pariatur consequatur iure, voluptatem eaque
             alias minus eos temporibus neque ullam at nam sapiente eveniet
