@@ -3,7 +3,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const fetchedId = urlParams.get("id");
 
-import { animate, stagger } from "https://cdn.skypack.dev/motion";
+import { animate, stagger, inView } from "https://cdn.skypack.dev/motion";
 animate(
   document.querySelector(".loader span"),
   {
@@ -27,10 +27,21 @@ async function initFech() {
       duration: 0.3,
     }
   );
+  inView("#features_section > section", ({ target }) => {
+    animate(
+      target,
+      { transform: ["translateX(400px)", "translateX(0)"], opacity: [0, 1] },
+      {
+        delay: stagger(0.2),
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
 }
 
 async function loadProject() {
-  const response = await fetch("projects.json");
+  const response = await fetch("portfolio_projects.json");
   const projects = await response.json();
   const project = projects[fetchedId - 1];
   // replace contents

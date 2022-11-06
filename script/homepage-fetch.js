@@ -5,7 +5,7 @@ function initFech() {
 }
 
 async function loadProjects() {
-  const response = await fetch("projects.json");
+  const response = await fetch("portfolio_projects.json");
   const projects = await response.json();
 
   displayProjects(projects);

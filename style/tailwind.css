@@ -640,6 +640,34 @@ video {
   bottom: 1.5rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-\[-24px\] {
+  top: -24px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.bottom-\[-24px\] {
+  bottom: -24px;
+}
+
+.bottom-\[-48px\] {
+  bottom: -48px;
+}
+
+.bottom-\[-128px\] {
+  bottom: -128px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -670,6 +698,10 @@ video {
 
 .z-\[999\] {
   z-index: 999;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .col-span-full {
@@ -847,6 +879,10 @@ video {
   height: 2px;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .max-h-72 {
   max-height: 18rem;
 }
@@ -927,6 +963,18 @@ video {
   width: 16rem;
 }
 
+.w-5\/12 {
+  width: 41.666667%;
+}
+
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
 .min-w-fit {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -937,12 +985,16 @@ video {
   min-width: 3rem;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .grow {
@@ -1277,14 +1329,14 @@ video {
   line-height: 1rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-medium {
@@ -1860,6 +1912,14 @@ form button:hover span,
     height: auto;
   }
 
+  .lg\:h-24 {
+    height: 6rem;
+  }
+
+  .lg\:h-32 {
+    height: 8rem;
+  }
+
   .lg\:w-9\/12 {
     width: 75%;
   }
@@ -1908,6 +1968,26 @@ form button:hover span,
 }
 
 @media (min-width: 1280px) {
+  .xl\:top-0 {
+    top: 0px;
+  }
+
+  .xl\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .xl\:bottom-\[-128px\] {
+    bottom: -128px;
+  }
+
+  .xl\:left-2 {
+    left: 0.5rem;
+  }
+
+  .xl\:left-0 {
+    left: 0px;
+  }
+
   .xl\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1916,20 +1996,8 @@ form button:hover span,
     grid-column: span 2 / span 2;
   }
 
-  .xl\:w-\[36rem\] {
-    width: 36rem;
-  }
-
   .xl\:w-\[42rem\] {
     width: 42rem;
-  }
-
-  .xl\:max-w-\[60\%\] {
-    max-width: 60%;
-  }
-
-  .xl\:max-w-\[70\%\] {
-    max-width: 70%;
   }
 
   .xl\:grid-cols-4 {
@@ -1944,20 +2012,17 @@ form button:hover span,
     align-items: center;
   }
 
-  .xl\:gap-10 {
-    gap: 2.5rem;
-  }
-
-  .xl\:gap-12 {
-    gap: 3rem;
-  }
-
   .xl\:gap-24 {
     gap: 6rem;
   }
 
   .xl\:gap-y-52 {
     row-gap: 13rem;
+  }
+
+  .xl\:gap-x-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
 
   .xl\:border-t-0 {
@@ -1977,6 +2042,10 @@ form button:hover span,
 
   .\32xl\:max-w-\[70\%\] {
     max-width: 70%;
+  }
+
+  .\32xl\:max-w-4xl {
+    max-width: 56rem;
   }
 
   .\32xl\:flex-row {

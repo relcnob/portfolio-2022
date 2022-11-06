@@ -47,18 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  inView(".project-contents > div:nth-of-type(2)", ({ target }) => {
-    console.log(target);
-    animate(
-      target.querySelectorAll("section"),
-      { transform: ["translateX(400px)", "translateX(0)"], opacity: [0, 1] },
-      {
-        delay: stagger(0.2),
-        duration: 1,
-        easing: "ease-in-out",
-      }
-    );
-  });
   inView(".project-gallery", ({ target }) => {
     console.log(target);
     animate(
@@ -79,6 +67,32 @@ document.addEventListener("DOMContentLoaded", () => {
       { transform: ["translateY(400px)", "translateY(0)"], opacity: [0, 1] },
       {
         delay: stagger(0.2),
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
+  inView(" #features_section span:first-of-type", ({ target }) => {
+    animate(
+      target,
+      {
+        width: ["0%", "33.333333%"],
+      },
+      {
+        delay: 0.2,
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
+  inView(" #features_section span:last-of-type", ({ target }) => {
+    animate(
+      target,
+      {
+        width: ["0%", "33.333333%"],
+      },
+      {
+        delay: 0.2,
         duration: 1,
         easing: "ease-in-out",
       }

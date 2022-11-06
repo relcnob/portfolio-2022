@@ -76,7 +76,7 @@
         class="project-heading flex flex-row flex-wrap gap-2 md:gap-8 items-start xl:items-center w-full justify-start items-center relative mb-2 lg:mb-0"
       >
         <h1
-          class="text-2xl lg:text-4xl xl:text-5xl font-display min-w-fit no-wrap w-full md:w-auto"
+          class="text-2xl lg:text-4xl font-display min-w-fit no-wrap w-full md:w-auto"
         >
           //project name
         </h1>
@@ -114,13 +114,13 @@
         </div>
       </section>
       <section
-        class="project-contents w-full min-h-100 border-2 border-zinc-800 rounded grid gap-6 grid-cols-1 xl:gap-y-52 overflow-hidden p-2 md:p-4 lg:p-6"
+        class="project-contents w-full min-h-100 border-2 border-zinc-800 rounded grid gap-6 grid-cols-1 xl:gap-x-0 xl:gap-y-52 overflow-hidden p-2 md:p-4 lg:p-6"
       >
         <div
           class="flex flex-col 2xl:flex-row gap-12 w-full col-span-1 items-center justify-center"
         >
           <img
-            class="main-image aspect-video object-cover block rounded max-w-5xl"
+            class="main-image aspect-video object-cover block rounded 2xl:max-w-4xl"
             src="assets/temp.jpg"
           />
           <div class="main-project-section flex flex-col">
@@ -152,12 +152,19 @@
         </div>
         <div
           id="features_section"
-          class="flex flex-col gap-24 w-full xl:col-span-2 2xl:col-span-2"
-        ></div>
+          class="flex flex-col gap-24 w-full xl:col-span-2 2xl:col-span-2 relative"
+        >
+          <span
+            class="absolute w-4/12 h-12 lg:h-24 striped-bg right-2 top-[-24px] xl:top-0 z-[-1]"
+          ></span>
+          <span
+            class="absolute w-1/4 h-12 lg:h-24 dotted-bg right-0 bottom-[-48px] xl:left-0 xl:bottom-[-128px] z-[-1]"
+          ></span>
+        </div>
         <div
           class="project-gallery grid gap-4 grid-cols-1 md:grid-cols-3 mt-4 col-span-1 lg:col-span-full w-full"
         >
-          <h2 class="font-display text-3xl my-4 col-span-full text-rose-500">
+          <h2 class="font-display text-3xl my-2 col-span-full text-rose-500">
             //Gallery
           </h2>
           <img
@@ -204,7 +211,7 @@
     </footer>
     <template id="section_template">
       <section
-        class="flex flex-col md:flex-row w-100 gap-4 xl:gap-24 items-center"
+        class="flex flex-col md:flex-row w-100 gap-4 xl:gap-24 items-center relative"
       >
         <img
           loading="lazy"
