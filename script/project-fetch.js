@@ -2,12 +2,46 @@ window.addEventListener("DOMContentLoaded", initFech);
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const fetchedId = urlParams.get("id");
-function initFech() {
-  loadProject();
+
+import { animate, stagger, inView } from "https://cdn.skypack.dev/motion";
+animate(
+  document.querySelector(".loader span"),
+  {
+    transform: ["rotate(0)", "rotate(3turn)"],
+  },
+  {
+    duration: 4,
+  }
+);
+
+async function initFech() {
+  await loadProject();
+  setTimeout;
+  animate(
+    document.querySelector(".loader"),
+    {
+      transform: ["scale(1)", "scale(0)"],
+    },
+    {
+      stagger: 1,
+      duration: 0.3,
+    }
+  );
+  inView("#features_section > section", ({ target }) => {
+    animate(
+      target,
+      { transform: ["translateX(400px)", "translateX(0)"], opacity: [0, 1] },
+      {
+        delay: stagger(0.2),
+        duration: 1,
+        easing: "ease-in-out",
+      }
+    );
+  });
 }
 
 async function loadProject() {
-  const response = await fetch("projects.json");
+  const response = await fetch("portfolio_projects.json");
   const projects = await response.json();
   const project = projects[fetchedId - 1];
   // replace contents
@@ -18,7 +52,7 @@ async function loadProject() {
     const litag = document.createElement("li");
     litag.textContent = tag;
     litag.classList.value =
-      "border-2 border-solid px-3 md:px-4 lg:px-8 py-3 rounded-3xl";
+      "border-2 border-solid px-3 md:px-4 lg:px-8 py-3 rounded";
     document.querySelector(".project-tags ul").appendChild(litag);
   });
   document.querySelector(".main-image").src = project.mainPic;

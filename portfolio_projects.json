@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "name": "Assignment portfolio",
+    "shortDesc": "This project was the culmination of my 1st semester at KEA, the goal was to create a portfolio of all assignments from the period",
+    "fullDesc": "For my project I decided to go with a minimal design and put an emphasis on good UX and readible UI. The website was built using vanilla HTML and CSS with a little bit of JavaScript. As for the visual parts of the website I decided to go with a dark, black background and white text accented by yellow coolor to emphasize certain sections for the project. Color was used sparsely to showcase the main content of this website - the projects.",
+    "link": "http://portfolio.relcnob.com/",
+    "mainPic": "assets/project_1/main.jpg",
+    "features": [
+      {
+        "title": "Responsivity",
+        "description": "Throughout my education I've been taught to code the websites responsively and with mobile-first design in mind. All pages of the website are responsive and were tested on various mobile devices. ",
+        "img": "assets/project_1/detail_1.jpg"
+      },
+      {
+        "title": "Project list",
+        "description": "To make sure that navigating throughout my projects is nice and easy I've provided the user with an accordion menu, in which projects are divided into separate sections for each of the themes we went through that semester.",
+        "img": "assets/project_1/detail_2.jpg"
+      },
+      {
+        "title": "Navigation",
+        "description": "UX of the website was one of the main considerations while coding, each of the project pages is provided with breadcrumbs section which the users can use to navigate back to the sections of the page they want to visit. The main navbar in the top part of the page and the secondary one in the footer have active page indicators helping the user see where they are.",
+        "img": "assets/project_1/detail_3.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS"],
+    "mockups": [
+      "assets/project_1/mockup_1.jpg",
+      "assets/project_1/mockup_2.jpg",
+      "assets/project_1/mockup_3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Browser game",
+    "shortDesc": "This assignment introduced me to how to manipulate DOM elements via CSS and animations.",
+    "fullDesc": "This project was coded and designed by me as a part of an assignment for my education at KEA. All assets and code was made by me. The assets were created exclusively in Adobe Illustrator based on initial sketches created on paper. The project is a simple point-and-click game, in which as a mighty wizard you have to protect your castle from the invaders, but be careful not to hurt the villagers fleeing the town nearby.",
+    "link": "http://arcanedefender.relcnob.com/game.html",
+    "mainPic": "assets/project_2/main.jpg",
+    "features": [
+      {
+        "title": "Code",
+        "description": "The game was created with vanilla JavaScript and is manipulated by eventListeners which call functions needed while certain events are called by the browser, i.e. click or animationend. Most of the functions in the code of the game were abstracted as much as I could do it back when I made it, to provide for less repetitive code. The gameplay loop is rather simple, the player, as the wizard has to hit as many of the invaders as they can, when that happens or a villager reaches the gate the score goes up by 1. Player wins when the point limit is met. The defeat happens when the timer reaches 0 and the player doesn't have enough points, enough invaders reach the gate or the player hits too many villagers.",
+        "img": "assets/project_2/detail-1.jpg"
+      },
+      {
+        "title": "Assets",
+        "description": "As mentioned previously the assets were created in Adobe Illustrator and used in the game as .svg sprites. This approach provided that the game is small in size and scalable. The assets were created with flad design in mind and with simple shapes. I kept the color palettes of both good and bad targets closely together in each of the groups, but contrasting enough between them to not confuse the player.",
+        "img": "assets/project_2/detail-2.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "mockups": [
+      "assets/project_2/mockup-1.jpg",
+      "assets/project_2/mockup-2.jpg",
+      "assets/project_2/mockup-3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rufus Vin Website",
+    "shortDesc": "This project was created as a group project, part of my 2nd semester exam. The company which we worked with was in need of a new webstore and website in one.",
+    "fullDesc": "In this project my role was the main coder and webdesigner of the website, our group worked together on first prototypes which then later got translated into a prototype created in Figma. The website includes a store page which fetches a list of products from our database based on wordpress api. It also includes sorting, filtering and searching through the products as well as a mockup of purchase process.",
+    "link": "https://relcnob.github.io/RufusVin/",
+    "mainPic": "assets/project_3/main.jpg",
+    "features": [
+      {
+        "title": "Store page",
+        "description": "This part of the project was by far the most complicated one. Fetching the products from the database was not a complicated task, but making sure that the user can sort and filter through them proved to be a little challange requiring me to do additional research. Filtering and searching is handled through URL parameters, but sorting is done by rearranging the array of already fetched products.",
+        "img": "assets/project_3/detail-1.jpg"
+      },
+      {
+        "title": "Product page",
+        "description": "The product page of this project includes data fetched from our database with details describing each of the wines added there. Afterwards these values get inserted into right fields or translated into images or sliders.",
+        "img": "assets/project_3/detail-2.jpg"
+      },
+      {
+        "title": "Basket view",
+        "description": "For the basket part of the webstore I created a prototype of an actual basked, the orders are not affecting any databases, but the product which we send to it from the product page gets inserted into it. The user can affect the basket by removing the item as well as use a discount code. The form itself includes basic validation.",
+        "img": "assets/project_3/detail-3.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS", "JavaScript", "Wordpress"],
+    "mockups": [
+      "assets/project_3/mockup-1.jpg",
+      "assets/project_3/mockup-2.jpg",
+      "assets/project_3/mockup-3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Hogwarts Student List",
+    "shortDesc": "This project provides the user with a sort-of admin panel functionalities where they can see and manage a list of students.",
+    "fullDesc": "Hogwarts Student List was created with vanilla JavaScript from the data provided in 2 JSON files. The project istelf shows the list of students and allows the user to filter, search and sort in much cleaner way. There are also functionalities available while accessing each of the students, such as expeling them or giving them specific statuses. ",
+    "link": "https://relcnob.github.io/Hogwarts_student_list/",
+    "mainPic": "assets/project_4/main.jpg",
+    "features": [
+      {
+        "title": "Design",
+        "description": "The design with which I came up with is intended to give off this fantasy feeling, making it slightly more relatable to the origin of the data and the theme of this project. Which is why the elements might feel slightly skeuomorphic.",
+        "img": "assets/project_4/detail-1.jpg"
+      },
+      {
+        "title": "Functionality",
+        "description": "This project provides the user with an easy way to get an overview of the data as well as ways to find what they are searching for. Each of the entries is displayed as a wide tab with a picture of a student and additional icons showing their Hogwarts house allegiance, blood status and more. As a part of this assignment there is a 'Hacker mode' which can be accessed by pressing the 'H' button on the keyboard. It overwrites certain functions of the site and scrambles some of the data, for example, the blood status of the students is completely randomized. It also inserts additional entry into the array of the students, which includes special permissions.",
+        "img": "assets/project_4/detail-2.jpg"
+      }
+    ],
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "mockups": [
+      "assets/project_4/mockup-1.jpg",
+      "assets/project_4/mockup-2.jpg",
+      "assets/project_4/mockup-3.jpg"
+    ]
+  }
+]

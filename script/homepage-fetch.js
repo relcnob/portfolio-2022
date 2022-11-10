@@ -5,19 +5,18 @@ function initFech() {
 }
 
 async function loadProjects() {
-  const response = await fetch("projects.json");
+  const response = await fetch("portfolio_projects.json");
   const projects = await response.json();
 
   displayProjects(projects);
 }
 
 function displayProjects(projectsArr) {
-  console.log(projectsArr);
   const template = document.querySelector("#project_card_template").content;
   const parent = document.querySelector("#works_wrapper");
   projectsArr.forEach((project) => {
     const clone = template.cloneNode(true);
-    console.log(project);
+
     clone.querySelector("h3").textContent = project.name;
     clone.querySelector(".project-tags").innerHTML = "";
     project.tags.forEach((tag) => {

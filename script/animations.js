@@ -44,7 +44,7 @@ function animInit() {
   animate(
     document.querySelector("header span:first-of-type"),
     {
-      width: ["0%", "30%"],
+      width: ["0%", "33.333333%"],
     },
     {
       delay: 0.75,
@@ -126,7 +126,7 @@ function animInit() {
     animate(
       target,
       {
-        height: ["0%", "30%"],
+        height: ["0%", "24rem"],
       },
       {
         delay: stagger(0.1),
